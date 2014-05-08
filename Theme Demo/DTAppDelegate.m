@@ -7,14 +7,23 @@
 //
 
 #import "DTAppDelegate.h"
+#import "DTMainViewController.h"
+#import "DTThemeTestA.h"
+#import "DTThemeTestB.h"
 
 @implementation DTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DTMainViewController *mainViewController = [DTMainViewController mainViewController];
+    [mainViewController setThemeClass:[DTThemeTestA class]];
+//    [mainViewController setThemeClass:[DTThemeTestB class]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:mainViewController];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
