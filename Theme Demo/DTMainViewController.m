@@ -2,16 +2,19 @@
 //  DTMainViewController.m
 //  Theme Demo
 //
-//  Created by Eden Li on 2014/5/7.
-//  Copyright (c) 2014年 Eden Li. All rights reserved.
+//  Created by Darktt on 2014/5/7.
+//  Copyright (c) 2014年 Darktt. All rights reserved.
 //
 
 #import "DTMainViewController.h"
-#import "DTTheme.h"
+#import "DTThemeDemoViewController.h"
+
+#import "DTThemeTestA.h"
+#import "DTThemeTestB.h"
 
 @interface DTMainViewController ()
 {
-    Class ThemeClass;
+    NSArray *_themeMenu;
 }
 
 @end
@@ -64,11 +67,12 @@
 {
     [super viewDidLoad];
     
-    if (ThemeClass == NULL) {
-        return;
-    }
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setTitle:@"Theme Demo"];
     
-    [self.view setBackgroundColor:[ThemeClass backgroundColor]];
+    _themeMenu = [[NSArray alloc] initWithObjects:@"Theme 1", @"Theme 2", nil];
+    
+    [self.tableView reloadData];
 }
 
 - (void)dealloc
@@ -77,19 +81,57 @@
     [super dealloc];
 }
 
-#pragma mark - Other Method
+#pragma mark - UITableView DataSource Methods
 
-- (void)setThemeClass:(Class)themeClass
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    BOOL subclass = [themeClass isSubclassOfClass:[DTTheme class]];
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_themeMenu count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
     
-    if (!subclass) {
-        NSLog(@"%@ isn't inherit from DTTheme", NSStringFromClass(themeClass));
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    }
+    
+    [cell.textLabel setText:(NSString *)_themeMenu[indexPath.row]];
+	
+    return cell;
+}
+
+#pragma mark UITableView Delegate Methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 0) {
+        
+        DTThemeDemoViewController *themeDemo = [DTThemeDemoViewController themeDemoWithThemeClass:[DTThemeTestA class]];
+        
+        [self.navigationController pushViewController:themeDemo animated:YES];
         
         return;
     }
     
-    ThemeClass = themeClass;
+    if (indexPath.row == 1) {
+        
+        DTThemeDemoViewController *themeDemo = [DTThemeDemoViewController themeDemoWithThemeClass:[DTThemeTestB class]];
+        
+        [self.navigationController pushViewController:themeDemo animated:YES];
+        
+        return;
+    }
 }
+
 
 @end

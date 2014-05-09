@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5553035D191C76FD00498FB2 /* DTThemeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5553035C191C76FD00498FB2 /* DTThemeDemoViewController.m */; };
 		55C57C53191A2FA300DD50CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C57C52191A2FA300DD50CF /* Foundation.framework */; };
 		55C57C55191A2FA300DD50CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C57C54191A2FA300DD50CF /* CoreGraphics.framework */; };
 		55C57C57191A2FA300DD50CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C57C56191A2FA300DD50CF /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5553035B191C76FD00498FB2 /* DTThemeDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTThemeDemoViewController.h; sourceTree = "<group>"; };
+		5553035C191C76FD00498FB2 /* DTThemeDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTThemeDemoViewController.m; sourceTree = "<group>"; };
 		55C57C4F191A2FA300DD50CF /* Theme Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theme Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C57C52191A2FA300DD50CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55C57C54191A2FA300DD50CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				55C57C62191A2FA300DD50CF /* DTAppDelegate.m */,
 				55C57C81191A2FBC00DD50CF /* DTMainViewController.h */,
 				55C57C82191A2FBC00DD50CF /* DTMainViewController.m */,
+				5553035B191C76FD00498FB2 /* DTThemeDemoViewController.h */,
+				5553035C191C76FD00498FB2 /* DTThemeDemoViewController.m */,
 				55C57C84191A311500DD50CF /* Theme */,
 				55C57C64191A2FA300DD50CF /* Images.xcassets */,
 				55C57C59191A2FA300DD50CF /* Supporting Files */,
@@ -273,6 +278,7 @@
 				55C57C63191A2FA300DD50CF /* DTAppDelegate.m in Sources */,
 				55C57C8D191A315200DD50CF /* DTTheme.m in Sources */,
 				55C57C5F191A2FA300DD50CF /* main.m in Sources */,
+				5553035D191C76FD00498FB2 /* DTThemeDemoViewController.m in Sources */,
 				55C57C8A191A314100DD50CF /* DTThemeTestB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +480,7 @@
 				55C57C7D191A2FA300DD50CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55C57C7E191A2FA300DD50CF /* Build configuration list for PBXNativeTarget "Theme DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +489,7 @@
 				55C57C80191A2FA300DD50CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,8 +2,8 @@
 //  main.m
 //  Theme Demo
 //
-//  Created by Eden Li on 2014/5/7.
-//  Copyright (c) 2014年 Eden Li. All rights reserved.
+//  Created by Darktt on 2014/5/7.
+//  Copyright (c) 2014年 Darktt. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  DTAppDelegate.m
 //  Theme Demo
 //
-//  Created by Eden Li on 2014/5/7.
-//  Copyright (c) 2014年 Eden Li. All rights reserved.
+//  Created by Darktt on 2014/5/7.
+//  Copyright (c) 2014年 Darktt. All rights reserved.
 //
 
 #import "DTAppDelegate.h"
@@ -16,13 +16,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     DTMainViewController *mainViewController = [DTMainViewController mainViewController];
-    [mainViewController setThemeClass:[DTThemeTestA class]];
-//    [mainViewController setThemeClass:[DTThemeTestB class]];
+    
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window setRootViewController:mainViewController];
+    [self.window setRootViewController:navigation];
+    [navigation release];
     
     [self.window makeKeyAndVisible];
     return YES;
