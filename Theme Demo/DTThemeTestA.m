@@ -20,6 +20,11 @@
     return [UIColor whiteColor];
 }
 
++ (UIColor *)textColor
+{
+    return [UIColor blackColor];
+}
+
 + (CGRect)imageViewRect
 {
     return CGRectMake(110, 2, 100, 124);

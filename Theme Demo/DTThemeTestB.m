@@ -17,6 +17,11 @@
 
 + (UIColor *)backgroundColor
 {
+    return [UIColor blackColor];
+}
+
++ (UIColor *)textColor
+{
     return [UIColor whiteColor];
 }
 

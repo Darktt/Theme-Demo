@@ -82,6 +82,8 @@
     
     UITextView *textView = [[UITextView alloc] initWithFrame:[_themeClass textViewRect]];
     [textView setText:[_themeClass stringForTextView]];
+    [textView setTextColor:[_themeClass textColor]];
+    [textView setBackgroundColor:[_themeClass backgroundColor]];
     [textView setUserInteractionEnabled:NO];
     [textView setScrollEnabled:YES];
     [textView sizeToFit];

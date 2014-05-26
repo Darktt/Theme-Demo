@@ -11,7 +11,10 @@
 @interface DTTheme : NSObject
 
 + (NSString *)navigationTitle;
+
+// Colors
 + (UIColor *)backgroundColor;
++ (UIColor *)textColor;
 
 + (CGRect)imageViewRect;
 + (UIImage *)imageForImageView;

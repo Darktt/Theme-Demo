@@ -10,7 +10,21 @@
 
 @implementation DTTheme
 
++ (NSString *)navigationTitle
+{
+    [NSException raise:@"Invoked abstract method" format:@"Invoked abstract method"];
+    
+    return nil;
+}
+
 + (UIColor *)backgroundColor
+{
+    [NSException raise:@"Invoked abstract method" format:@"Invoked abstract method"];
+    
+    return nil;
+}
+
++ (UIColor *)textColor
 {
     [NSException raise:@"Invoked abstract method" format:@"Invoked abstract method"];
     
